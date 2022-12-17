@@ -1,0 +1,51 @@
+.block{
+box-sizing: border-box;
+width: 210px;
+padding: 5px;
+display: flex;
+position: relative;
+justify-content: center;
+flex-wrap: wrap;
+margin: auto;
+border: 1px solid black;
+}
+
+.block1{
+display: flex;
+width: 210px;
+height: 30px;
+align-items: center;
+padding-left: 5px;
+border: 1px solid black;
+}
+
+.elem_del{
+display: flex;
+width: 20px;
+height: 20px;
+justify-content: center;
+align-items: center;
+border: 1px solid black;
+}
+
+.block2{
+display: flex;
+box-sizing: border-box;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 210px;
+height: 160px;
+padding-top: 5px;
+/*
+border: 1px solid black;
+*/
+}
+
+.elem{
+display: flex;
+width: 40px;
+height: 30px;
+justify-content: center;
+align-items: center;
+border: 1px solid black;
+}
