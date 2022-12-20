@@ -15,11 +15,13 @@ display: flex;
 width: 210px;
 height: 30px;
 align-items: center;
+justify-content: space-between;
 padding-left: 5px;
 border: 1px solid black;
 }
 
-.elem_del{
+#elem_del{
+position: relative;
 display: flex;
 width: 20px;
 height: 20px;
@@ -42,10 +44,35 @@ border: 1px solid black;
 }
 
 .elem{
+box-sizing: border-box;
+position: relative;
 display: flex;
+padding: 0;
 width: 40px;
 height: 30px;
 justify-content: center;
 align-items: center;
 border: 1px solid black;
+}
+
+.elem a{
+cursor: pointer;
+display: flex;
+position:absolute;
+top: 0;
+width: 40px;
+height: 30px;
+align-items: center;
+justify-content: center;
+transition: 0.1s;
+}
+
+#elem_del{
+cursor: pointer;
+transition: 0.1s;
+}
+
+.elem a:hover,#elem_del:hover{
+color: #fff;
+background-color: black;
 }
