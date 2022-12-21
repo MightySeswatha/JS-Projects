@@ -1,49 +1,72 @@
 window.onload = function(){
 
-let elem = document.getElementsByClassName('elem');
-let elem_del = document.getElementById('elem_del');
+let td = document.getElementsByTagName('td');
+let move = document.getElementById('move');
+let btn = document.getElementById('btn');
 let text = document.getElementById("text");
+let win_x = document.getElementById("win_x");
+let win_0 = document.getElementById("win_0");
+let draw = document.getElementById("draw");
 
-elem_del.onclick = function(){
-text.innerHTML = "";
-}
+for(let i = 0; i < td.length; i++){
 
-for(let i = 0; i < elem.length; i++){
-elem[i].onclick = function(){
-if(elem[i].children[0].innerHTML == "÷"){text.innerHTML += "/";}
-else if(elem[i].children[0].innerHTML == "×"){text.innerHTML += "*";}
-else if(elem[i].children[0].innerHTML == "="){text.innerHTML = calc(text.innerHTML);}
-else{text.innerHTML += elem[i].children[0].innerHTML;}
+td[i].onclick = function(){
+if(move.innerHTML == "x"){
+td[i].innerHTML = "X";
+td[i].style = "pointer-events: none";
+move.innerHTML = "0";
 }
-}
-
-
-function calc(text){
-let str = text;
-let temp = "";
-let arr = [];
-let arr2 = [];
-let j = 0;
-let k = 0;
-for(let i = 0; i < str.length; i++){
-if(i == str.length-1){temp += str[i]; arr[j] = Number(temp); j++; temp = "";}
-else if(str[i] == "+" || str[i] == "-" || str[i] == "*" || str[i] == "/"){arr[j] = Number(temp); j++; temp = ""; arr2[k] = str[i]; k++;}
-else{temp += str[i];}
-}
-console.log(arr);
-console.log(arr2);
-let res = arr[0];
-console.log(res);
-for(let i = 1; i < arr.length; i++){
-if(arr2[i-1] == "+"){res += arr[i];}
-else if(arr2[i-1] == "-"){res -= arr[i];}
-else if(arr2[i-1] == "*"){res *= arr[i];}
-else if(arr2[i-1] == "/"){res /= arr[i];}
-}
-console.log(res);
-if(isNaN(res)){return str}
-return res;
+else{
+td[i].innerHTML = "0";
+move.innerHTML = "x";
+td[i].style = "pointer-events: none";
 }
 
+if(win() == true){
+text.innerHTML = "Выиграл: ";
+move.innerHTML = td[i].innerHTML.toLowerCase();
+if(td[i].innerHTML.toLowerCase() == "x"){win_x.innerHTML = Number(win_x.innerHTML)+1;}
+if(td[i].innerHTML.toLowerCase() == "0"){win_0.innerHTML = Number(win_0.innerHTML)+1;}
+for(let i = 0; i < td.length;i++){
+td[i].style = "pointer-events: none";
+}
+}
+
+else if(win() == "draw"){
+  
+text.innerHTML = "Ничья";
+for(let i = 0; i < td.length;i++){
+td[i].style = "pointer-events: none";
+}
+
+
+}
+
+
+
+
+
+
+}
+}
+
+btn.onclick = function(){
+text.innerHTML = "Ходит: ";
+for(let i = 0; i < td.length; i++){
+td[i].innerHTML = "";
+td[i].style = "";
+if(move.innerHTML == "0"){move.innerHTML = "x";}
+else{move.innerHTML = "0";}
+}
+}
+
+function win(){
+for(let i = 0; i < 3; i++){
+if(td[i*3].innerHTML == td[i*3+1].innerHTML && td[i*3+1].innerHTML == td[i*3+2].innerHTML && td[i*3].innerHTML != ""){return true;}
+if(td[i].innerHTML == td[i+3].innerHTML && td[i+3].innerHTML == td[i+6].innerHTML && td[i].innerHTML != ""){return true;}
+if(td[0].innerHTML == td[4].innerHTML && td[4].innerHTML == td[8].innerHTML && td[0].innerHTML != ""){return true;}
+if(td[2].innerHTML == td[4].innerHTML && td[4].innerHTML == td[6].innerHTML && td[2].innerHTML != ""){return true;}
+}
+}
 
 }

@@ -8,7 +8,7 @@
 				<link rel="stylesheet" href="style.css">
 		<title>Tic-tac-toe</title>
 	</head>
-	<body>
+	<body id="body">
 <div class="block">
 <table>
 <tr>
@@ -17,8 +17,8 @@
 <td></td>
 </tr>
 <tr>
-<td>0</td>
-<td>X</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -27,13 +27,13 @@
 <td></td>
 </tr>
 </table>
-<div>Ходит: <div class="move">x</div></div>
-<input type="button" value="Начать с начала">
+<div><div id="text">Ходит: </div><div id="move">x</div></div>
+<input id="btn" type="button" value="Начать с начала">
 </div>
 <div class="status">
-<div class="status_inner">Выиграл <b>x</b>: <div class="win_x">0</div></div>
-<div class="status_inner">Выиграл <b>0</b>: <div class="win_0">0</div></div>
-<div class="status_inner">Ничья: <div class="draw">0</div></div>
+<div class="status_inner">Выиграл <b>x</b>: <div id="win_x">0</div></div>
+<div class="status_inner">Выиграл <b>0</b>: <div id="win_0">0</div></div>
+<div class="status_inner">Ничья: <div id="draw">0</div></div>
 </div>
 	</body>
 
