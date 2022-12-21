@@ -20,6 +20,11 @@ padding-left: 5px;
 border: 1px solid black;
 }
 
+.block1 input{
+text-align: right;
+border: none;
+}
+
 #elem_del{
 position: relative;
 display: flex;

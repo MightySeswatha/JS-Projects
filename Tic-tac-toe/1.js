@@ -33,20 +33,13 @@ td[i].style = "pointer-events: none";
 }
 
 else if(win() == "draw"){
-  
+move.innerHTML = "";
 text.innerHTML = "Ничья";
+draw.innerHTML = Number(draw.innerHTML)+1;
 for(let i = 0; i < td.length;i++){
 td[i].style = "pointer-events: none";
 }
-
-
 }
-
-
-
-
-
-
 }
 }
 
@@ -67,6 +60,13 @@ if(td[i].innerHTML == td[i+3].innerHTML && td[i+3].innerHTML == td[i+6].innerHTM
 if(td[0].innerHTML == td[4].innerHTML && td[4].innerHTML == td[8].innerHTML && td[0].innerHTML != ""){return true;}
 if(td[2].innerHTML == td[4].innerHTML && td[4].innerHTML == td[6].innerHTML && td[2].innerHTML != ""){return true;}
 }
+
+let t = 0;
+for(let i = 0; i < td.length; i++){
+if(td[i].innerHTML != ""){console.log(t);t++;}
+else{}
+}
+if(t == 8){return "draw";}
 }
 
 }

@@ -5,15 +5,15 @@ let elem_del = document.getElementById('elem_del');
 let text = document.getElementById("text");
 
 elem_del.onclick = function(){
-text.innerHTML = "";
+text.value = "";
 }
 
 for(let i = 0; i < elem.length; i++){
 elem[i].onclick = function(){
-if(elem[i].children[0].innerHTML == "÷"){text.innerHTML += "/";}
-else if(elem[i].children[0].innerHTML == "×"){text.innerHTML += "*";}
-else if(elem[i].children[0].innerHTML == "="){text.innerHTML = calc(text.innerHTML);}
-else{text.innerHTML += elem[i].children[0].innerHTML;}
+if(elem[i].children[0].innerHTML == "÷"){text.value += "/";}
+else if(elem[i].children[0].innerHTML == "×"){text.value += "*";}
+else if(elem[i].children[0].innerHTML == "="){text.value = calc(text.value);}
+else{text.value += elem[i].children[0].innerHTML;}
 }
 }
 
