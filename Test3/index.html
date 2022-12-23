@@ -4,6 +4,12 @@
 		<meta charset="utf-8">
         <script src="1.js"></script>
 				<script>
+        function func(elem){
+				let radio = elem.parentElement.parentElement.children;
+				for(let i = 0; i < elem.parentElement.parentElement.children.length; i++){
+				if(radio[i].childNodes[0] != elem){radio[i].childNodes[0].checked = false;}
+				}
+				}
 				</script>
 				<link rel="stylesheet" href="style.css">
 		<title>Test3</title>
@@ -12,28 +18,28 @@
 <ul>
 <li>Какой язык вы предпочитаете?
 <ul>
-<li><input class="radio" type="radio" value="">JavaScript</li>
-<li><input class="radio" type="radio" value="">HTML/CSS</li>
-<li><input class="radio" type="radio" value="">PHP</li>
-<li><input class="radio" type="radio" value="">C++</li>
-<li><input class="radio" type="radio" value="">Русский</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="JavaScript">JavaScript</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="HTML/CSS">HTML/CSS</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="PHP">PHP</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="C++">C++</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="Русский">Русский</li>
 <li>Свой ответ: <input class="text" type="text"></li>
 </ul>
 </li>
 <li>Какой редактор кода используете?
 <ul>
-<li><input class="radio" type="radio" value="">Notepad++</li>
-<li><input class="radio" type="radio" value="">Блокнот</li>
-<li><input class="radio" type="radio" value="">Sublime Text</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="Notepad++">Notepad++</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="Блокнот">Блокнот</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="Sublime Text">Sublime Text</li>
 <li>Свой ответ: <input class="text" type="text"></li>
 </ul>
 </li>
 <li>Какой у вас опыт?
 <ul>
-<li><input class="radio" type="radio" value="">6 месяцев</li>
-<li><input class="radio" type="radio" value="">Около года</li>
-<li><input class="radio" type="radio" value="">Пара лет</li>
-<li><input class="radio" type="radio" value="">Пол жизни</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="6 месяцев">6 месяцев</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="Около года">Около года</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="Пара лет">Пара лет</li>
+<li><input class="radio" type="radio" onclick="func(this)" value="Пол жизни">Пол жизни</li>
 <li>Свой ответ: <input class="text" type="text"></li>
 </ul>
 </li>
