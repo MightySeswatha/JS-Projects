@@ -4,3 +4,26 @@ width: 203px;
 height: 24px;
 padding-left: 5px;
 }
+
+#off{
+display: none;
+border: none;
+}
+
+.block{
+display: flex;
+flex-direction: column;
+margin-top: -4px;
+margin-left: 5px;
+width: 212px;
+border: 1px solid black;
+}
+
+.block_in{
+display: flex;
+width: 100%;
+}
+
+.block_in:hover{
+background-color: #E8E8E8;
+}
