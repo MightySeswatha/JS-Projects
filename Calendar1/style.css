@@ -1,2 +1,19 @@
 body{
+display: flex;
+justify-content: center;
+}
+
+.block{
+display: flex;
+justify-content: center;
+text-align: center;
+flex-direction: column;
+}
+
+.text{
+margin-top: 10px;
+}
+
+td{
+border: 1px solid black;
 }
