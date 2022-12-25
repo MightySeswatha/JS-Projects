@@ -1,6 +1,10 @@
 window.onload = function(){
 
+
 let today = new Date();
+const t_year = today.getFullYear();
+const t_month = today.getMonth();
+const t_day1 = today.getDay();
 let text = document.getElementById('text');
 let table = document.getElementsByTagName("table");
 let month = ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
@@ -23,12 +27,16 @@ changedate(today);
 /*Функция изменения даты*/
 function changedate(date){
 
+  while (table[0].firstChild) {
+    table[0].removeChild(table[0].firstChild);
+  }
+
 text.innerHTML = date.getFullYear()+" "+month[date.getMonth()];
 let tr = document.createElement("tr");
 for(let i = 1; i <= date.daysInMonth(); i++){
 let td = document.createElement("td");
 td.innerHTML = i;
-if(t_day == i){
+if(t_day == i && date.getFullYear() == t_year && date.getMonth() == t_month){
 td.style.backgroundColor = "black";
 td.style.color = "white";
 }
@@ -47,7 +55,8 @@ changedate(today);
 }
 
 btn_prev.onclick = function(){
-console.log("test");
+today.setMonth(today.getMonth() - 1);
+changedate(today);
 }
 
 }
