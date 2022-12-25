@@ -17,3 +17,17 @@ margin: 20px auto;
 .off{
 display: none;
 }
+
+table{
+
+}
+
+td{
+cursor: pointer;
+box-sizing: border-box;
+display: flex;
+width: 60px;
+height: 60px;
+align-items: center;
+justify-content: center;
+}
