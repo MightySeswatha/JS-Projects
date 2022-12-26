@@ -6,7 +6,6 @@ justify-content: center;
 .block{
 box-sizing: border-box;
 width: 255px;
-height: 208px;
 padding: 0;
 border: 1px solid black;
 }
@@ -35,14 +34,6 @@ background-color: #ffffff;
 border: none;
 }
 
-.text{
-border: 1px solid green;
-}
-
-.change{
-border: 1px solid green;
-}
-
 .btn{
 cursor: pointer;
 display: inline;
@@ -50,5 +41,6 @@ display: inline;
 
 .elem{
 cursor: pointer;
-border: 1px solid red;
+width: 20px;
+text-align: center;
 }
