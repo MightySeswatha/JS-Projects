@@ -28,7 +28,6 @@ Date.prototype.daysInMonth = function() {
 
 text.innerHTML = date.getFullYear()+" "+month[date.getMonth()];
 let k = date.daysInMonth();
-console.log(k + " всего дней");
 
 
 
@@ -58,10 +57,12 @@ else{
 elem.innerHTML = i;
 if(i > k){elem.innerHTML = "";}
 i++;
-
 }
 
 row.appendChild(elem);
+let temp = new Date();
+
+if(temp.getDate() == i-1 && month[temp.getMonth()] == month[date.getMonth()] && date.getFullYear() == temp.getFullYear()){elem.style.background = "black"; elem.style.color = "white";}
 
 }
 
