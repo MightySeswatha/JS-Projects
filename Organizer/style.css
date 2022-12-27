@@ -1,0 +1,51 @@
+body{
+display: flex;
+justify-content: center;
+}
+
+.block{
+box-sizing: border-box;
+width: 255px;
+padding: 0;
+border: 1px solid black;
+}
+
+.row{
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+width: 100%;
+padding: 0;
+}
+
+.row1{
+padding: 8px;
+}
+
+.row2{
+padding: 3px 5px;
+background-color: lightgray;
+border: 1px solid gray;
+}
+
+.row3{
+padding: 3px 5px;
+background-color: #ffffff;
+border: none;
+}
+
+.btn{
+cursor: pointer;
+display: inline;
+}
+
+.elem{
+cursor: pointer;
+width: 20px;
+text-align: center;
+}
+
+.elem:hover{
+background-color: black;
+color: #fff;
+}
