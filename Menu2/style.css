@@ -1,0 +1,29 @@
+body{
+display: flex;
+justify-content: center;
+}
+
+.block{
+display: flex;
+width: 70%;
+flex-direction: column;
+}
+
+.elem{
+  width: 100%;
+  cursor: pointer;
+  margin: 5px 0;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f6f6f6;
+  font-weight: normal;
+  color: #454545;
+}
+
+.active{
+  border: 1px solid #003eff;
+  background: #007fff;
+  font-weight: normal;
+  color: #ffffff;
+}
