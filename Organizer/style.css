@@ -3,6 +3,11 @@ display: flex;
 justify-content: center;
 }
 
+.col{
+display: flex;
+flex-direction: column;
+}
+
 .block{
 box-sizing: border-box;
 width: 255px;
@@ -48,4 +53,23 @@ text-align: center;
 .elem:hover{
 background-color: black;
 color: #fff;
+}
+
+.active{
+background-color: lightgray;
+border: 1px solid gray;
+}
+
+#note{
+box-sizing: border-box;
+display: none;
+padding: 0;
+width: 100%;
+height: 300px;
+border: 1px solid black;
+}
+
+#btn_save,
+#btn_delete{
+display: none;
 }
