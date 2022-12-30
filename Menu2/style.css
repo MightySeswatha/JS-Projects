@@ -10,6 +10,7 @@ flex-direction: column;
 }
 
 .elem{
+  display: flex;
   width: 100%;
   cursor: pointer;
   margin: 5px 0;
@@ -26,4 +27,18 @@ flex-direction: column;
   background: #007fff;
   font-weight: normal;
   color: #ffffff;
+}
+
+.tab{
+box-sizing: border-box;
+height: 0;
+display: none;
+width: 102%;
+padding: 12px;
+font: 12px Arial;
+text-align: justify;
+}
+
+.on{
+display: flex;
 }
